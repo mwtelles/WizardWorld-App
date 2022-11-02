@@ -34,11 +34,22 @@ public class MainActivity extends AppCompatActivity {
         final TextView feiticosText = findViewById(R.id.feiticosText);
         final TextView bruxosText = findViewById(R.id.bruxosText);
 
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragmentContainer, CasasFragment.class, null)
+                .commit();
+
         casasLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if(selectedTab != 1) {
+
+                    getSupportFragmentManager().beginTransaction()
+                            .setReorderingAllowed(true)
+                            .replace(R.id.fragmentContainer, CasasFragment.class, null)
+                            .commit();
+
                     pocoesText.setVisibility(View.GONE);
                     feiticosText.setVisibility(View.GONE);
                     bruxosText.setVisibility(View.GONE);
@@ -55,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     casasImage.setImageResource(R.drawable.casas_selected_icon);
                     casasLayout.setBackgroundResource(R.drawable.round_back_home_100);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f)
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
 
@@ -70,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(selectedTab != 2) {
+
+                    getSupportFragmentManager().beginTransaction()
+                            .setReorderingAllowed(true)
+                            .replace(R.id.fragmentContainer, PocoesFragment.class, null)
+                            .commit();
+
                     casasText.setVisibility(View.GONE);
                     feiticosText.setVisibility(View.GONE);
                     bruxosText.setVisibility(View.GONE);
@@ -86,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     pocoesImage.setImageResource(R.drawable.pocoes_selected_icon);
                     pocoesLayout.setBackgroundResource(R.drawable.round_back_pocoes_100);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f)
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
 
@@ -101,6 +118,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(selectedTab != 3) {
+
+                    getSupportFragmentManager().beginTransaction()
+                            .setReorderingAllowed(true)
+                            .replace(R.id.fragmentContainer, FeiticosFragment.class, null)
+                            .commit();
+
                     casasText.setVisibility(View.GONE);
                     pocoesText.setVisibility(View.GONE);
                     bruxosText.setVisibility(View.GONE);
@@ -117,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     feiticosImage.setImageResource(R.drawable.feiticos_selected_icon);
                     feiticosLayout.setBackgroundResource(R.drawable.round_back_feiticos_100);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f)
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
 
@@ -133,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(selectedTab != 4) {
+
+                    getSupportFragmentManager().beginTransaction()
+                            .setReorderingAllowed(true)
+                            .replace(R.id.fragmentContainer, BruxosFragment.class, null)
+                            .commit();
+
                     casasText.setVisibility(View.GONE);
                     pocoesText.setVisibility(View.GONE);
                     feiticosText.setVisibility(View.GONE);
@@ -149,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                     bruxosImage.setImageResource(R.drawable.bruxos_selected_icon);
                     bruxosLayout.setBackgroundResource(R.drawable.round_back_bruxos_100);
 
-                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f)
+                    ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f, 1.0f, 1f, 1f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
 
