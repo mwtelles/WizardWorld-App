@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="" alt="logo" height="200px"/>
+  <img src="https://github.com/mwtelles/WizardWorld-App/blob/main/app/src/main/res/drawable/ww_logo.png" alt="logo" height="200px"/>
 </h4>
 
 <h1 align="center">
