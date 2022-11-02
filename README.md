@@ -2,10 +2,6 @@
   <img src="https://github.com/mwtelles/WizardWorld-App/blob/main/app/src/main/res/drawable/ww_logo.png" alt="logo" height="200px"/>
 </h4>
 
-<h1 align="center">
-    🚀 Mundo Bruxo 🚀
-</h1>
-
 <p align="center">Explorando o mundo bruxo como aplicação para composição da segunda nota na disciplina de Lab de desenvolvimento híbrido - Professor Tássio de Oliveira Silva Auad</p>
 
 <p align="center">
