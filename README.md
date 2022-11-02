@@ -5,6 +5,8 @@
 <p align="center">Explorando o mundo bruxo como aplicação para composição da segunda nota na disciplina de Lab de desenvolvimento híbrido - Professor Tássio de Oliveira Silva Auad</p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Android-9.0-green" />
+  <img src="https://img.shields.io/badge/API-28-blue" />
   <img src="https://img.shields.io/badge/license-MIT-success"/>
 </p>
 
