@@ -7,6 +7,11 @@
     android:background="@color/casas"
     tools:context=".MainActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentContainer"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
