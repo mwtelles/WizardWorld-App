@@ -1,4 +1,4 @@
-package com.mwtelles.app;
+package com.mwtelles.hogwartshouses;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.mwtelles.app", appContext.getPackageName());
+        assertEquals("com.mwtelles.hogwartshouses", appContext.getPackageName());
     }
 }

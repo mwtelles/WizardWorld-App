@@ -1,4 +1,4 @@
-package com.mwtelles.app;
+package com.mwtelles.hogwartshouses;
 
 import org.junit.Test;
 

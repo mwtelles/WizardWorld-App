@@ -7,14 +7,4 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="casas">#1194AA</color>
-    <color name="bruxos">#C9379D</color>
-    <color name="pocoes">#AE7E0F</color>
-    <color name="feiticos">#5B37B7</color>
-
-    <color name="casas_20">#331194AA</color>
-    <color name="bruxos_20">#33C9379D</color>
-    <color name="pocoes_20">#33AE7E0F</color>
-    <color name="feiticos_20">#335B37B7</color>
 </resources>

@@ -1,152 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/casas"
-    tools:context=".MainActivity">
+    android:paddingTop="?attr/actionBarSize">
 
-    <androidx.fragment.app.FragmentContainerView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragmentContainer"
-        android:layout_above="@+id/bottomBar"
-        />
-    <LinearLayout
-        android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:background="@color/white"
-        android:layout_alignParentBottom="true">
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
 
-        <LinearLayout
-            android:id="@+id/casasLayout"
-            android:background="@drawable/round_back_home_100"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:gravity="center"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/casasImage"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/casas_selected_icon"/>
-
-            <TextView
-                android:id="@+id/casasText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Casas"
-                android:textColor="@color/casas"
-                android:layout_marginStart="10dp"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/pocoesLayout"
-            android:background="@android:color/transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:gravity="center"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/pocoesImage"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/pocoes_icon"/>
-
-            <TextView
-                android:id="@+id/pocoesText"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Poções"
-                android:textColor="@color/pocoes"
-                android:layout_marginStart="10dp"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/feiticosLayout"
-            android:background="@android:color/transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:gravity="center"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/feiticosImage"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/feiticos_icon"/>
-
-            <TextView
-                android:id="@+id/feiticosText"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Feitiços"
-                android:textColor="@color/feiticos"
-                android:layout_marginStart="10dp"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/bruxosLayout"
-            android:background="@android:color/transparent"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:gravity="center"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/bruxosImage"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/bruxos_icon"/>
-
-            <TextView
-                android:id="@+id/bruxosText"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bruxos"
-                android:textColor="@color/bruxos"
-                android:layout_marginStart="10dp"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
