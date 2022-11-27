@@ -26,10 +26,13 @@ public class StaffActivity extends Activity {
 
         TextView staffName = (TextView) findViewById(R.id.staffName);
         TextView staffHouse = (TextView) findViewById(R.id.staffHouse);
+        TextView staffActor = (TextView) findViewById(R.id.staffActor);
+
         ImageView staffImage = (ImageView) findViewById(R.id.staffImage);
 
         staffName.setText(staff.getName());
         staffHouse.setText(staff.getHouse());
+        staffActor.setText(staff.getActor());
 
         Glide.with(this).load(staff.getImage()).into(staffImage);
 

@@ -4,8 +4,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.mwtelles.hogwartshouses.R;
 import com.mwtelles.hogwartshouses.model.entity.Students;
 
@@ -38,11 +40,24 @@ public class StudentsAdapter extends BaseAdapter {
         }
 
         Students students = (Students) getItem(position);
-        TextView textViewName = convertView.findViewById(R.id.studentName);
-        TextView textViewEffect = convertView.findViewById(R.id.studentHouse);
+        TextView studentName = convertView.findViewById(R.id.studentName);
+        TextView studentHouse = convertView.findViewById(R.id.studentHouse);
+        TextView studentActor = convertView.findViewById(R.id.studentActor);
 
-        textViewName.setText(students.getName());
-        textViewEffect.setText(students.getHouse());
+        ImageView staffImage = convertView.findViewById(R.id.studentImage);
+
+        studentName.setText(students.getName());
+        studentActor.setText(students.getActor());
+        studentHouse.setText(students.getHouse());
+
+        Glide.with(parent.getContext()).load(students.getImage()).into(staffImage);
+
+        Glide
+                .with(parent.getContext())
+                .load(students.getImage())
+                .into((ImageView) convertView.findViewById(R.id.studentImage));
+
+
 
         return convertView;
     }

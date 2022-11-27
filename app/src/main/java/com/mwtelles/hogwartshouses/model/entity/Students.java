@@ -5,11 +5,15 @@ public class Students {
         private int id;
         private String name;
         private String house;
+        private String actor;
+        private String image;
 
-        public Students(int id, String name, String house) {
+        public Students(int id, String name, String house, String actor, String image) {
             this.id = id;
             this.name = name;
             this.house = house;
+            this.actor = actor;
+            this.image = image;
         }
 
     public Integer getId() {
@@ -36,5 +40,19 @@ public class Students {
             this.house = house;
         }
 
+        public String getActor() {
+            return actor;
+        }
 
+        public void setActor(String actor) {
+            this.actor = actor;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
 }

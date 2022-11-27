@@ -52,8 +52,9 @@ public class StaffDao {
                 String name = jsonObject.getString("name");
                 String house = jsonObject.getString("house");
                 String image = jsonObject.getString("image");
+                String actor = jsonObject.getString("actor");
 
-                staffList.add(new Staff(id, name, house, image));
+                staffList.add(new Staff(id, name, house, image, actor));
             }
 
         } catch (JSONException e) {

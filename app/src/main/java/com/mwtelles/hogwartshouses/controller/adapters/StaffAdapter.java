@@ -42,10 +42,14 @@ public class StaffAdapter extends BaseAdapter {
         Staff staff = (Staff) getItem(position);
         TextView staffName = convertView.findViewById(R.id.staffName);
         TextView staffHouse = convertView.findViewById(R.id.staffHouse);
+        TextView staffActor = convertView.findViewById(R.id.staffActor);
+
         ImageView staffImage = convertView.findViewById(R.id.staffImage);
 
         staffName.setText(staff.getName());
+        staffActor.setText(staff.getActor());
         staffHouse.setText(staff.getHouse());
+
         Glide.with(parent.getContext()).load(staff.getImage()).into(staffImage);
 
         Glide

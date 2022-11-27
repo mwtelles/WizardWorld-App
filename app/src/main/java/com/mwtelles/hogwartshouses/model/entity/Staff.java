@@ -8,12 +8,14 @@ public class Staff {
     private String name;
     private String house;
     private String image;
+    private String actor;
 
-    public Staff(int id, String name, String house, String image) {
+    public Staff(int id, String name, String house, String image, String actor) {
         this.id = id;
         this.name = name;
         this.house = house;
         this.image = image;
+        this.actor = actor;
     }
 
     public int getId() {
@@ -46,5 +48,13 @@ public class Staff {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getActor() {
+        return actor;
+    }
+
+    public void setActor(String actor) {
+        this.actor = actor;
     }
 }

@@ -8,6 +8,14 @@
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp">
 
+    <ImageView
+        android:id="@+id/staffImage"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="fitXY" />
+
     <TextView
         android:id="@+id/staffName"
         android:layout_width="match_parent"
@@ -22,11 +30,11 @@
         <TextView
             android:id="@+id/staffHouse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/title_house" />
-    <ImageView
-        android:id="@+id/staffImage"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/staffActor"
         android:layout_width="match_parent"
-        android:layout_height="46dp" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

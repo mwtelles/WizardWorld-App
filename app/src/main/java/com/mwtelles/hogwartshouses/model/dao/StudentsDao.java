@@ -50,8 +50,10 @@ public class StudentsDao {
                 int id = i;
                 String name = jsonObject.getString("name");
                 String house = jsonObject.getString("house");
+                String actor = jsonObject.getString("actor");
+                String image = jsonObject.getString("image");
 
-                studentsList.add(new Students(id, name, house));
+                studentsList.add(new Students(id, name, house, actor, image));
             }
 
         } catch (JSONException e) {
